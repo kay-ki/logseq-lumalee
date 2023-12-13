@@ -1,9 +1,12 @@
+
+
 .light-theme,
 .white-theme,
 html[data-theme=light] {
   --ls-block-bullet-border-color: transparent;
   --ls-block-bullet-color: #7699A1;
   --ls-link-text-color: #7699A1;
+  font-family: "Inter", sans-serif;
 }
 
 a {
@@ -21,7 +24,7 @@ a.tag {
 	color: 					#7699A1;
 	font-size: 				1rem;
 	font-weight: 			400;
-	opacity: 				1;*/
+	opacity: 				1;
 }
 
 a.tag:hover{
@@ -48,7 +51,6 @@ a[priority],
 a.priority {
   font-size: 0px;
   color: #7699A1;
-  /* Hide text */
 }
 
 a[priority=A]::before,
@@ -221,7 +223,6 @@ a.page-ref:hover {
 text-decoration: none;
 }
 
-/* hide recents */
  .recent {
   display: none;
 } 
@@ -243,4 +244,15 @@ text-decoration: none;
         display: none;
     }
   }
+}
+
+h1 {
+  font-size: 1.6rem !important;
+  font-weight: 300 !important;
+  font-family: "Fira Sans", "sans-serif;";
+}
+
+#journals .journal-item:first-child {
+    min-height: 250px;
+    margin-top: -20px;
 }
