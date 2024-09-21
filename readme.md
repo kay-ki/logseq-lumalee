@@ -8,5 +8,5 @@ Lumalee is a light, minimalistic theme for Logseq. It is based on [gavinnm](http
 
 Add the following to your Logseq custom.css file:
 ```
-@import url('https://cdn.jsdelivr.net/gh/kay-ki/Lumalee-Logseq-Theme/custom.min.css');
+@import url('https://cdn.jsdelivr.net/gh/kay-ki/logseq-lumalee/custom.min.css');
 ```
