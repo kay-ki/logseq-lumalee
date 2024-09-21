@@ -1,7 +1,17 @@
 {
-  "name": "logseq-lumalee",
+  "name": "Lumalee",
   "version": "0.0.1",
+  "author": "kay-ki",
+  "repository": "kay-ki/logseq-lumalee",
   "logseq": {
+    "themes": [
+      {
+        "name": "Lumalee Theme",
+        "url": "./custom.css",
+        "description": "Minimalistic light theme",
+        "mode": "light"
+      }
+    ],
     "id": "lumalee",
     "icon": "icon.png"
   }
