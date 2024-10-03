@@ -346,6 +346,7 @@ div.flex.sidebar-item.content.color-level.rounded-md.shadow-lg:first-of-type {
 
 .cp__right-sidebar-scrollable {
   background-color: var(--ls-custom-bg) !important;
+  overflow-y: scroll !important;
 }
 
 .cp__right-sidebar .sidebar-item.item-type-block .sidebar-item-header {
@@ -1709,6 +1710,27 @@ span.showWeekday {
   opacity: 0.7 !important;
   font-family: "Source Sans 3" !important;
   margin-bottom: 8px;
+}
+
+#holidayForWorldCountry {
+    text-decoration: none !important;
+    font-size: smaller;
+}
+
+.showWeekday > span:first-of-type {
+margin-left: 0px !important;
+}
+
+.showWeekday>span {
+    margin-left: 4px !important;
+}
+
+span.showWeekday {
+    margin-bottom: 10px;
+}
+
+.showWeekday > button {
+    display: none !important;
 }
 
 span.inline.with-bg-color {
