@@ -228,6 +228,16 @@ span.page-title {
   font-family: "Source Sans 3", "tabler-icons" !important;
 }
 
+/* fix rotating arrow position */
+
+div.journal-item>div>div>.block-control:first-of-type {
+    margin-bottom: 12px !important;
+}
+
+div.references-blocks-item > div > div > div > div > a.block-control:first-of-type {
+    margin-bottom: 0px !important;
+}
+
 /* generic block edits */
 .ls-block {
   padding: 1px 0;
@@ -1709,7 +1719,7 @@ div .logseq-tab {
 span.showWeekday {
   opacity: 0.7 !important;
   font-family: "Source Sans 3" !important;
-  margin-bottom: 8px;
+  margin-bottom: 13px;
 }
 
 #holidayForWorldCountry {
@@ -1723,10 +1733,6 @@ margin-left: 0px !important;
 
 .showWeekday>span {
     margin-left: 4px !important;
-}
-
-span.showWeekday {
-    margin-bottom: 12px;
 }
 
 .showWeekday > button {
