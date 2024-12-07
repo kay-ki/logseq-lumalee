@@ -117,6 +117,14 @@ h1.title, h1.title input, span.title {
   color: var(--ls-custom-black);
 }
 
+h1.page-title > span.page-icon {
+  padding-top: 2px !important;
+}
+
+.title .page-icon {
+    margin-right: 6px;
+}
+
 .ls-block :is(h1, h2) {
   border-bottom: none;
 }
