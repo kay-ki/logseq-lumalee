@@ -572,7 +572,7 @@ div.flex.sidebar-item.content.color-level.rounded-md.shadow-lg:first-of-type {
     border-right: none;
   }
 
-  /* 侧边栏标题的背景颜色 */
+  /* sidebar title background color */
   .color-level {
     background-color: var(--ls-primary-background-color) !important;
   }
@@ -1866,4 +1866,65 @@ span.showWeekday {
 span.inline.with-bg-color {
   background-color: hsl(var(--primary)/.3) !important;
   border-radius: 4px;
+}
+
+/* fix dark Logseq and light no-accent color */
+
+/* Dark theme fixes */
+html[data-theme=dark][data-color=logseq] .references-blocks-item {
+  background-color: transparent;
+}
+
+.form-input[data-theme=dark][data-color=logseq] {
+  background-color: hsl(var(--background));
+}
+
+/* Base transparent backgrounds */
+.menu-links-outer, .menu-links-wrapper {
+  background-color: transparent;
+}
+
+html:not([data-color=logseq]) .absolute-modal[data-modal-name], 
+html:not([data-color=logseq]) .menu-links-outer, 
+html:not([data-color=logseq]) div[data-radix-popper-content-wrapper] div[role=menu] {
+  background-color: transparent;
+}
+
+/* Settings menu items */
+html[data-theme=light] .settings-menu-item:hover a {
+  background-color: var(--text-primary) !important;
+}
+html[data-color]:not([data-color="none"]) .settings-menu-item:hover a {
+  background-color: hsl(var(--primary)/.9) !important;
+}
+
+html[data-theme=light] .cp__settings-inner>aside ul>li.active a {
+  background-color: var(--text-primary) !important;
+}
+html[data-color]:not([data-color="none"]) .cp__settings-inner>aside ul>li.active a {
+  background-color: hsl(var(--primary)/.9) !important;
+}
+
+/* Background utilities */
+html[data-theme=light] .bg-primary\/90 {
+  background-color: var(--text-primary) !important;
+}
+html[data-color]:not([data-color="none"]) .bg-primary\/90 {
+  background-color: hsl(var(--primary)/.9) !important;
+}
+
+/* Toggle switches */
+html[data-theme=light] .ui__toggle-background-off,
+html[data-theme=light] .ui__toggle-background-on {
+  background-color: var(--text-primary) !important;
+}
+
+html[data-color]:not([data-color="none"]) .ui__toggle-background-off,
+html[data-color]:not([data-color="none"]) .ui__toggle-background-on {
+  background-color: hsl(var(--primary)) !important;
+}
+
+/* Special case for none color */
+html[data-color=none] .ui__toggle-background-off .switcher {
+  background-color: var(--lx-gray-03,var(--ls-tertiary-background-color,var(--rx-gray-03)));
 }
