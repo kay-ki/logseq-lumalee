@@ -1,6 +1,6 @@
 # Lumalee Logseq Theme
 
-Lumalee is a light, minimalistic theme for Logseq. It is based on [gavinmn](https://github.com/gavinmn)'s Luma theme, features multiple changes and added support for accent colors.
+Lumalee is a clean, minimalistic theme for Logseq with light and dark modes. It is based on [gavinmn](https://github.com/gavinmn)'s Luma theme but adds improved styling and support for custom accent colors.
 
 ![Screenshot](screenshot.png)
 
