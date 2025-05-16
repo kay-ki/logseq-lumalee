@@ -1001,6 +1001,11 @@ nav[aria-label="Navigation menu"] {
   color: var(--text-faint);
 }
 
+
+html[data-color=none] #ui__ac-inner .menu-link.chosen, #ui__ac-inner .menu-link:hover {
+  background-color: var(--text-primary) !important;
+}
+
 #ui__ac-inner .menu-link.chosen,
 #ui__ac-inner .menu-link:hover {
   background-color: hsl(var(--primary)/.2) !important;
@@ -1017,6 +1022,10 @@ nav[aria-label="Navigation menu"] {
 
 .ui__ac-inner>a.chosen div {
   background-color: hsl(var(--primary)) !important;
+}
+
+html[data-color=none] #ui__ac-inner .menu-link.chosen {
+  color: var(--bg1) !important;
 }
 
 .absolute.rounded-md.shadow-lg.absolute-modal {
@@ -1136,6 +1145,7 @@ mark {
   color: var(--ls-primary-text-color) !important;
   opacity: 1;
   background-color: hsl(var(--primary)/.2) !important;
+  padding: 0px 2px;
 }
 
 
@@ -1870,50 +1880,69 @@ span.inline.with-bg-color {
 
 /* fix dark Logseq and light no-accent color */
 
-/* Dark theme fixes */
+/* === DARK THEME FIXES === */
 html[data-theme=dark][data-color=logseq] .references-blocks-item {
   background-color: transparent;
 }
 
-.form-input[data-theme=dark][data-color=logseq] {
+html[data-theme=dark][data-color=logseq] .form-input {
   background-color: hsl(var(--background));
 }
 
-/* Base transparent backgrounds */
-.menu-links-outer, .menu-links-wrapper {
+/* === MENU BACKGROUNDS === */
+.menu-links-outer,
+.menu-links-wrapper {
   background-color: transparent;
 }
 
-html:not([data-color=logseq]) .absolute-modal[data-modal-name], 
-html:not([data-color=logseq]) .menu-links-outer, 
+/* Override for non-logseq themes */
+html:not([data-color=logseq]) .absolute-modal[data-modal-name],
+html:not([data-color=logseq]) .menu-links-outer,
 html:not([data-color=logseq]) div[data-radix-popper-content-wrapper] div[role=menu] {
   background-color: transparent;
 }
 
-/* Settings menu items */
+/* Specific background fixes for menu elements */
+div[data-radix-popper-content-wrapper] div[role=menu],
+.menu-links-wrapper,
+.absolute-modal[data-modal-name] {
+  background-color: var(--ls-primary-background-color) !important;
+}
+
+/* Special override for color schemes */
+html[data-color]:not([data-color="none"]) .menu-links-wrapper {
+  background-color: var(--ls-primary-background-color);
+}
+
+/* === SETTINGS MENU === */
+/* Hover states */
 html[data-theme=light] .settings-menu-item:hover a {
   background-color: var(--text-primary) !important;
 }
+
 html[data-color]:not([data-color="none"]) .settings-menu-item:hover a {
   background-color: hsl(var(--primary)/.9) !important;
 }
 
+/* Active states */
 html[data-theme=light] .cp__settings-inner>aside ul>li.active a {
   background-color: var(--text-primary) !important;
 }
+
 html[data-color]:not([data-color="none"]) .cp__settings-inner>aside ul>li.active a {
   background-color: hsl(var(--primary)/.9) !important;
 }
 
-/* Background utilities */
+/* === BACKGROUND UTILITIES === */
 html[data-theme=light] .bg-primary\/90 {
   background-color: var(--text-primary) !important;
 }
+
 html[data-color]:not([data-color="none"]) .bg-primary\/90 {
   background-color: hsl(var(--primary)/.9) !important;
 }
 
-/* Toggle switches */
+/* === TOGGLE SWITCHES === */
 html[data-theme=light] .ui__toggle-background-off,
 html[data-theme=light] .ui__toggle-background-on {
   background-color: var(--text-primary) !important;
@@ -1924,7 +1953,18 @@ html[data-color]:not([data-color="none"]) .ui__toggle-background-on {
   background-color: hsl(var(--primary)) !important;
 }
 
-/* Special case for none color */
+/* Special case for 'none' color scheme */
 html[data-color=none] .ui__toggle-background-off .switcher {
-  background-color: var(--lx-gray-03,var(--ls-tertiary-background-color,var(--rx-gray-03)));
+  background-color: var(--lx-gray-03, var(--ls-tertiary-background-color, var(--rx-gray-03)));
+}
+
+/* === CONTENT HIGHLIGHTING === */
+html[data-theme=light] .block-highlight,
+html[data-theme=light] .content .selected {
+  background-color: lightgray !important;
+}
+
+/* === BULLET STYLING === */
+html[data-color="none"] .bullet-container:not(.typed-list).bullet-closed span.bullet {
+  background-color: black !important;
 }
