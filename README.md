@@ -7,6 +7,13 @@ Lumalee is a clean, minimalistic theme for Logseq with light and dark modes. It 
 ## Manual installation
 
 Add the following to your Logseq custom.css file:
+
+### Light theme
 ```
-@import url('https://cdn.jsdelivr.net/gh/kay-ki/logseq-lumalee/custom.min.css');
+@import url('https://cdn.jsdelivr.net/gh/kay-ki/logseq-lumalee/custom_light.min.css');
+```
+
+### Dark theme
+```
+@import url('https://cdn.jsdelivr.net/gh/kay-ki/logseq-lumalee/custom_dark.min.css');
 ```
